@@ -1,11 +1,18 @@
 import React from 'react';
+
+import { Nav } from './Nav';
+import { Header } from './Header';
 import styles from '../styles/Layout.module.css';
 
 export const Layout = ({ children }) => {
   return (
-    <div className={styles.container}>
-      <h1>Hello</h1>
-      {children}
-    </div>
+    <>
+      <Nav />
+      <div className={styles.container}>
+        <Header />
+        {children}
+      </div>
+      ;
+    </>
   );
 };
